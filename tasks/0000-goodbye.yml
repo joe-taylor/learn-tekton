@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: saygoodbye
+spec:
+  steps:
+    - name: saygoodbye
+      image: registry.redhat.io/ubi7/ubi-minimal
+      command:
+        - echo
+      args:
+        - tekton
+        - says
+        - goodbye!
