@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: sayhello
+spec:
+  steps:
+    - name: sayhello
+      image: registry.redhat.io/ubi7/ubi-minimal
+      command:
+        - echo
+      args:
+        - hello
+        - from
+        - tekton
